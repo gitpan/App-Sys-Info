@@ -1,0 +1,16 @@
+lib/App/Sys/Info.pm
+bin/sysinfo
+t/01-use.t
+Build.PL
+Changes
+MANIFEST
+README
+SPEC
+.perlcriticrc
+builder/Build.pm
+builder/Build/Spec.pm
+t/201-pod.t
+t/202-pod-coverage.t
+Makefile.PL	Generated automatically
+LICENSE
+META.yml
