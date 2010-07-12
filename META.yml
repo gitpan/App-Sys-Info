@@ -20,7 +20,7 @@ no_index:
 provides:
   App::Sys::Info:
     file: lib/App/Sys/Info.pm
-    version: 0.12
+    version: 0.13
 requires:
   Number::Format: 0
   Sys::Info: 0.73
@@ -29,4 +29,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://bitbucket.org/burak/cpan-app-sys-info/
-version: 0.12
+version: 0.13

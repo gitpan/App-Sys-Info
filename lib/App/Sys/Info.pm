@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use vars qw( $VERSION );
 
-$VERSION = '0.12';
+$VERSION = '0.13';
 
 use constant CP_UTF8      => 65_001;
 use constant KB           =>   1024;
@@ -278,12 +278,12 @@ App::Sys::Info - An application of Sys::Info to gather information from the host
 
 =head1 SYNOPSIS
 
-Run C<sysinfo> from the command line.
+Run C<psysinfo> from the command line.
 
 =head1 DESCRIPTION
 
-This document describes version C<0.12> of C<App::Sys::Info>
-released on C<11 April 2010>.
+This document describes version C<0.13> of C<App::Sys::Info>
+released on C<12 July 2010>.
 
 The output is identical to I<systeminfo> windows command.
 
@@ -318,7 +318,7 @@ Copyright 2010 Burak Gursoy. All rights reserved.
 =head1 LICENSE
 
 This library is free software; you can redistribute it and/or modify 
-it under the same terms as Perl itself, either Perl version 5.10.1 or, 
+it under the same terms as Perl itself, either Perl version 5.12.1 or, 
 at your option, any later version of Perl 5 you may have available.
 
 =cut
