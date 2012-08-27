@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0.40
 configure_requires:
-  Module::Build: 0.38
+  Module::Build: 0.40
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110930'
+generated_by: 'Module::Build version 0.4001, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,10 +18,11 @@ no_index:
     - monolithic_version
     - builder
     - t
+    - xt
 provides:
   App::Sys::Info:
     file: lib/App/Sys/Info.pm
-    version: 0.20
+    version: 0.21
 requires:
   Format::Human::Bytes: 0
   Sys::Info: 0.73
@@ -30,4 +31,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://bitbucket.org/burak/cpan-app-sys-info/
-version: 0.20
+version: 0.21

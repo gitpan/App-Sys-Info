@@ -4,7 +4,7 @@
       "Burak Gursoy <burak@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Module::Build version 0.4001, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -17,7 +17,8 @@
       "directory" : [
          "monolithic_version",
          "builder",
-         "t"
+         "t",
+         "xt"
       ]
    },
    "prereqs" : {
@@ -28,22 +29,22 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38"
+            "Module::Build" : "0.40"
          }
       },
       "runtime" : {
          "requires" : {
-            "Format::Human::Bytes" : 0,
+            "Format::Human::Bytes" : "0",
             "Sys::Info" : "0.73",
-            "Text::Table" : 0,
-            "Time::Elapsed" : 0
+            "Text::Table" : "0",
+            "Time::Elapsed" : "0"
          }
       }
    },
    "provides" : {
       "App::Sys::Info" : {
          "file" : "lib/App/Sys/Info.pm",
-         "version" : "0.20"
+         "version" : "0.21"
       }
    },
    "release_status" : "stable",
@@ -55,5 +56,5 @@
          "url" : "http://bitbucket.org/burak/cpan-app-sys-info/"
       }
    },
-   "version" : "0.20"
+   "version" : "0.21"
 }

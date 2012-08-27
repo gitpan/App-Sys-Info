@@ -1,9 +1,8 @@
 package App::Sys::Info;
 use strict;
 use warnings;
-use vars qw( $VERSION );
 
-$VERSION = '0.20';
+our $VERSION = '0.21';
 
 use constant CP_UTF8      => 65_001;
 use constant LAST_ELEMENT =>     -1;
@@ -336,6 +335,8 @@ __END__
 
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 App::Sys::Info - Application of Sys::Info to gather information from the system
@@ -346,8 +347,8 @@ Run C<psysinfo> from the command line.
 
 =head1 DESCRIPTION
 
-This document describes version C<0.20> of C<App::Sys::Info>
-released on C<16 April 2011>.
+This document describes version C<0.21> of C<App::Sys::Info>
+released on C<27 August 2012>.
 
 The output is similar to I<systeminfo> windows command.
 
@@ -379,12 +380,11 @@ Burak Gursoy <burak@cpan.org>.
 
 =head1 COPYRIGHT
 
-Copyright 2010 - 2011 Burak Gursoy. All rights reserved.
+Copyright 2010 - 2012 Burak Gursoy. All rights reserved.
 
 =head1 LICENSE
 
-This library is free software; you can redistribute it and/or modify 
-it under the same terms as Perl itself, either Perl version 5.10.0 or, 
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.12.3 or,
 at your option, any later version of Perl 5 you may have available.
-
 =cut
