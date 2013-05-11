@@ -4,7 +4,7 @@
       "Burak Gursoy <burak@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4001, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -44,7 +44,7 @@
    "provides" : {
       "App::Sys::Info" : {
          "file" : "lib/App/Sys/Info.pm",
-         "version" : "0.21"
+         "version" : "0.22"
       }
    },
    "release_status" : "stable",
@@ -56,5 +56,5 @@
          "url" : "http://bitbucket.org/burak/cpan-app-sys-info/"
       }
    },
-   "version" : "0.21"
+   "version" : "0.22"
 }

@@ -2,7 +2,7 @@ package App::Sys::Info;
 use strict;
 use warnings;
 
-our $VERSION = '0.21';
+our $VERSION = '0.22';
 
 use constant CP_UTF8      => 65_001;
 use constant LAST_ELEMENT =>     -1;
@@ -13,7 +13,7 @@ use POSIX                qw( locale_h );
 use Text::Table          qw();
 use Time::Elapsed        qw( elapsed  );
 use Sys::Info            qw();
-use Sys::Info::Constants qw( NEW_PERL );
+use Sys::Info::Constants qw( NEW_PERL OSID );
 
 my($NEED_CHCP, $OLDCP);
 
@@ -86,22 +86,24 @@ sub _init_encoding {
 }
 
 sub _probe {
-    my $self = shift;
-    my $meta = $self->meta;
-    my $NA   = $self->NA;
-    my $i    = $self->info;
-    my $os   = $self->os;
-    my $pt   = $os->product_type;
-    my $proc = $self->_processors;
-    my $tz   = $os->tz;
+    my $self   = shift;
+    my $meta   = $self->meta;
+    my $NA     = $self->NA;
+    my $i      = $self->info;
+    my $os     = $self->os;
+    my $pt     = $os->product_type;
+    my $proc   = $self->_processors;
+    my $tz     = $os->tz;
+    my $driver = 'Sys::Info::Driver::' . OSID;
     my @rv;
 
     push @rv,
-    [ 'Sys::Info Version' => Sys::Info->VERSION ],
-    [ 'Perl Version'      => $i->perl_long      ],
-    [ 'Host Name'         => $os->host_name     ],
-    [ 'OS Name'           => $self->_os_name    ],
-    [ 'OS Version'        => $self->_os_version ],
+        [ 'Sys::Info Version' => Sys::Info->VERSION ],
+        [  sprintf( '%s Driver Version', OSID ) => $driver->VERSION ],
+        [ 'Perl Version'      => $i->perl_long      ],
+        [ 'Host Name'         => $os->host_name     ],
+        [ 'OS Name'           => $self->_os_name    ],
+        [ 'OS Version'        => $self->_os_version ],
     ;
 
     my $manu = $meta->{manufacturer};
@@ -347,8 +349,8 @@ Run C<psysinfo> from the command line.
 
 =head1 DESCRIPTION
 
-This document describes version C<0.21> of C<App::Sys::Info>
-released on C<27 August 2012>.
+This document describes version C<0.22> of C<App::Sys::Info>
+released on C<11 May 2013>.
 
 The output is similar to I<systeminfo> windows command.
 
@@ -380,11 +382,11 @@ Burak Gursoy <burak@cpan.org>.
 
 =head1 COPYRIGHT
 
-Copyright 2010 - 2012 Burak Gursoy. All rights reserved.
+Copyright 2010 - 2013 Burak Gursoy. All rights reserved.
 
 =head1 LICENSE
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.12.3 or,
+it under the same terms as Perl itself, either Perl version 5.16.2 or,
 at your option, any later version of Perl 5 you may have available.
 =cut
