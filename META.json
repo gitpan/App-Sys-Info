@@ -44,7 +44,7 @@
    "provides" : {
       "App::Sys::Info" : {
          "file" : "lib/App/Sys/Info.pm",
-         "version" : "0.22"
+         "version" : "0.23"
       }
    },
    "release_status" : "stable",
@@ -56,5 +56,5 @@
          "url" : "http://bitbucket.org/burak/cpan-app-sys-info/"
       }
    },
-   "version" : "0.22"
+   "version" : "0.23"
 }

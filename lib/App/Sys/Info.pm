@@ -2,7 +2,7 @@ package App::Sys::Info;
 use strict;
 use warnings;
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 use constant CP_UTF8      => 65_001;
 use constant LAST_ELEMENT =>     -1;
@@ -287,7 +287,7 @@ sub _vm {
 sub _mb {
     my $self = shift;
     my $kb   = shift || return $self->NA;
-    return $self->fhb->base10( $kb );
+    return $self->fhb->base2( $kb, 2 );
 }
 
 sub _os_name {
@@ -349,7 +349,7 @@ Run C<psysinfo> from the command line.
 
 =head1 DESCRIPTION
 
-This document describes version C<0.22> of C<App::Sys::Info>
+This document describes version C<0.23> of C<App::Sys::Info>
 released on C<11 May 2013>.
 
 The output is similar to I<systeminfo> windows command.
@@ -387,6 +387,6 @@ Copyright 2010 - 2013 Burak Gursoy. All rights reserved.
 =head1 LICENSE
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.16.2 or,
+it under the same terms as Perl itself, either Perl version 5.12.4 or,
 at your option, any later version of Perl 5 you may have available.
 =cut
